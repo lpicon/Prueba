@@ -42,25 +42,13 @@ public class EjemploTest {
      */
     @Test
     public void testSaludar() {
-        System.out.println("saludar");
-        Ejemplo instance = new Ejemplo();
-        String expResult = "";
-        String result = instance.saludar();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of main method, of class Ejemplo.
-     */
-    @Test
-    public void testMain() throws Exception {
-        System.out.println("main");
-        String[] args = null;
-        Ejemplo.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        HolaMundo hola = new HolaMundo();
+        String result = hola.holaMundo();
+        
+        if(result.equals("Hola Spring Boot"))
+        	assertTrue(true);
+        else
+        	fail("The test case is a prototype.");
     }
     
 }
