@@ -70,7 +70,7 @@
 		<connection>scm:git:git@github.com:lpicon/Prueba.git</connection>
 		<developerConnection>scm:git:git@github.com:lpicon/Prueba.git</developerConnection>
 		<url>https://github.com/lpicon/Prueba.git</url>
-		<tag>springboot 0.0.2</tag>
+		<tag>sspringboot-1.0-SNAPSHOT</tag>
 	</scm>
 	
 <!-- Plugin maven para empaquetar los archivos ejecutables jar -->
@@ -80,6 +80,26 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
         </plugin>
+        
+        <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<checkModificationExcludes>
+						<checkModificationExclude>pom.xml</checkModificationExclude>
+					</checkModificationExcludes>
+				</configuration>
+			</plugin>
     </plugins>
 </build>
 </project>
