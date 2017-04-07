@@ -16,7 +16,8 @@ test:
   override:
     - mvn clean install
     - ./jfrog rt config --url "https://bancodebogota.jfrog.io/bancodebogota/repojuli/" --user "lpicon" --apikey "Ljpa37900122" --interactive false
-    - ./jfrog rt u "spring*/*.war" "https://bancodebogota.jfrog.io/bancodebogota/repojuli/" --build-name=build --build-number="1" --flat=false
+    - ./JFrog dl rt "Users/lpicon/Documents/workspace/springboot 2/target/ *. jar" nombre = my myBuild --build-number = 1
+    - ./jfrog rt u "spring*/*.jar" "https://bancodebogota.jfrog.io/bancodebogota/repojuli/" --build-name=build --build-number="1" --flat=false
     - ./jfrog rt bce build 1
     - ./jfrog rt bp build 1
 deployment:
