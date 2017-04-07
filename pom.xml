@@ -75,7 +75,7 @@
 		<connection>scm:git:git@github.com:lpicon/Prueba.git</connection>
 		<developerConnection>scm:git:git@github.com:lpicon/Prueba.git</developerConnection>
 		<url>https://github.com/lpicon/Prueba.git</url>
-		<tag>sspringboot-1.0-SNAPSHOT</tag>
+		<tag>spring-boot-1.0</tag>
 	</scm>
 	
 <!-- Plugin maven para empaquetar los archivos ejecutables jar -->
