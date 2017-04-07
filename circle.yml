@@ -6,8 +6,6 @@ machine:
   java:
     version: oraclejdk8
 dependencies:
-  pre:
-    - curl -fL https://getcli.jfrog.io | sh
   override:
     - git config --global user.email circleci@circleci
     - git config --global user.name CircleCI
@@ -18,3 +16,9 @@ test:
     - mvn clean install
     - ./generate_artifact.sh
     - git checkout generate_artifact.sh
+deployment:
+  production:
+    branch: master
+    commands:
+      - for t in `git tag`; do     git push origin :$t;     git tag -d $t; done
+      - last_commit=$(git log -1); if [[ $last_commit != *"[maven-release-plugin]"* ]]; then mvn -B release:clean release:prepare release:perform; fi
