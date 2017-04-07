@@ -15,7 +15,7 @@ dependencies:
 test:
   override:
     - mvn clean install
-    - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_APIKEY --interactive false
+    - ./jfrog rt config --url "https://bancodebogota.jfrog.io/bancodebogota/repojuli/" --user "lpicon" --apikey "Ljpa37900122" --interactive false
     - ./jfrog rt u "multi*/*.jar" <artifactory_repo_name> --build-name=<name_you_give_to_build> --build-number=$CIRCLE_BUILD_NUM --flat=false
     - ./jfrog rt u "multi*/*.war" <artifactory_repo_name> --build-name=<name_you_give_to_build> --build-number=$CIRCLE_BUILD_NUM --flat=false
     - ./jfrog rt bce <name_you_give_to_build> $CIRCLE_BUILD_NUM
