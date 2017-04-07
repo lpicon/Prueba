@@ -66,6 +66,13 @@
   </dependency>
 </dependencies>
 
+	<scm>
+		<connection>scm:git:git@github.com:lpicon/Prueba.git</connection>
+		<developerConnection>scm:git:git@github.com:lpicon/Prueba.git</developerConnection>
+		<url>https://github.com/lpicon/Prueba.git</url>
+		<tag>springboot 0.0.2</tag>
+	</scm>
+	
 <!-- Plugin maven para empaquetar los archivos ejecutables jar -->
 <build>
     <plugins>
