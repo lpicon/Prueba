@@ -6,6 +6,8 @@ machine:
   java:
     version: oraclejdk8
 dependencies:
+  pre:
+    - curl -fL https://getcli.jfrog.io | sh
   override:
     - git config --global user.email circleci@circleci
     - git config --global user.name CircleCI
@@ -13,6 +15,11 @@ dependencies:
 test:
   override:
     - mvn clean install
+    - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_APIKEY --interactive false
+    - ./jfrog rt u "multi*/*.jar" <artifactory_repo_name> --build-name=<name_you_give_to_build> --build-number=$CIRCLE_BUILD_NUM --flat=false
+    - ./jfrog rt u "multi*/*.war" <artifactory_repo_name> --build-name=<name_you_give_to_build> --build-number=$CIRCLE_BUILD_NUM --flat=false
+    - ./jfrog rt bce <name_you_give_to_build> $CIRCLE_BUILD_NUM
+    - ./jfrog rt bp <name_you_give_to_build> $CIRCLE_BUILD_NUM
 deployment:
   production:
     branch: master

@@ -1,19 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: juli.mycompany.springboot.EjemploTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.533 sec <<< FAILURE! - in juli.mycompany.springboot.EjemploTest
-testMain(juli.mycompany.springboot.EjemploTest)  Time elapsed: 0.456 sec  <<< ERROR!
-java.lang.NullPointerException: null
-	at org.springframework.boot.SpringApplication.configurePropertySources(SpringApplication.java:431)
-	at org.springframework.boot.SpringApplication.configureEnvironment(SpringApplication.java:413)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:282)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:952)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:941)
-	at juli.mycompany.springboot.Ejemplo.main(Ejemplo.java:26)
-	at juli.mycompany.springboot.EjemploTest.testMain(EjemploTest.java:61)
-
-testSaludar(juli.mycompany.springboot.EjemploTest)  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.AssertionError: The test case is a prototype.
-	at org.junit.Assert.fail(Assert.java:88)
-	at juli.mycompany.springboot.EjemploTest.testSaludar(EjemploTest.java:51)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in juli.mycompany.springboot.EjemploTest
