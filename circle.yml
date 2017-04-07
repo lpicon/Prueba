@@ -16,8 +16,7 @@ test:
   override:
     - mvn clean install
     - ./jfrog rt config --url "https://bancodebogota.jfrog.io/bancodebogota/repojuli/" --user "lpicon" --apikey "Ljpa37900122" --interactive false
-    - ./jfrog rt u "multi*/*.jar" <artifactory_repo_name> --build-name=<name_you_give_to_build> --build-number=$CIRCLE_BUILD_NUM --flat=false
-    - ./jfrog rt u "multi*/*.war" <artifactory_repo_name> --build-name=<name_you_give_to_build> --build-number=$CIRCLE_BUILD_NUM --flat=false
+    - ./jfrog rt u "spring*/*.war" "https://bancodebogota.jfrog.io/bancodebogota/repojuli/" --build-name=build --build-number="1" --flat=false
     - ./jfrog rt bce <name_you_give_to_build> $CIRCLE_BUILD_NUM
     - ./jfrog rt bp <name_you_give_to_build> $CIRCLE_BUILD_NUM
 deployment:
