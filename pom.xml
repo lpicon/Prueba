@@ -17,6 +17,19 @@
     <version>1.5.2.RELEASE</version>
 </parent>
 
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>bancodebogota-releases</name>
+        <url>https://bancodebogota.jfrog.io/bancodebogota/repojuli</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>bancodebogota-snapshots</name>
+        <url>https://bancodebogota.jfrog.io/bancodebogota/repojuli</url>
+    </snapshotRepository>
+</distributionManagement>
+
 <!-- Dependencias necesarias para una aplicacion web -->
 <dependencies>
 		<dependency>
