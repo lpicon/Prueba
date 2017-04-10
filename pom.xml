@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>juli.mycompany</groupId>
     <artifactId>springboot</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -63,7 +63,7 @@
 		<connection>scm:git:git@github.com:lpicon/Prueba.git</connection>
 		<developerConnection>scm:git:git@github.com:lpicon/Prueba.git</developerConnection>
 		<url>https://github.com/lpicon/Prueba.git</url>
-		<tag>springboot-0.0.1</tag>
+		<tag>springboot-1.1</tag>
 	</scm>
 	
 <!-- Plugin maven para empaquetar los archivos ejecutables jar -->
