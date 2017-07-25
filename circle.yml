@@ -22,5 +22,10 @@ deployment:
   production:
     branch: master
     commands:
-      - for t in `git tag`; do     git push origin :$t;     git tag -d $t; done
-      - last_commit=$(git log -1); if [[ $last_commit != *"[maven-release-plugin]"* ]]; then mvn -B release:clean release:prepare; fi
+      - |
+        if [[ `git log -1` =~ "[maven-release-plugin]" ]]; then
+            echo "Ignoring release plugin generated version"
+        else
+            echo "Preparing release..."
+            mvn -B release:prepare
+        fi
