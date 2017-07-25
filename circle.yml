@@ -11,7 +11,6 @@ dependencies:
   override:
     - git config --global user.email circleci@circleci
     - git config --global user.name CircleCI
-    - chmod 775 ./generate_artifact.sh
     - mvn dependency:resolve
 test:
   override:
