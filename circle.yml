@@ -1,10 +1,12 @@
+timezone:
+  America/Bogota
+java:
+  version: oraclejdk8
+
 general:
   artifacts:
     - "target/demo-*.jar"
-
-machine:
-  java:
-    version: oraclejdk8
+    
 dependencies:
   override:
     - git config --global user.email circleci@circleci
