@@ -15,8 +15,6 @@ dependencies:
 test:
   override:
     - mvn clean install
-    - ./generate_artifact.sh
-    - git checkout generate_artifact.sh
 
 deployment:
   production:
